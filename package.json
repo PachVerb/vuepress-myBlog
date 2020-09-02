@@ -1,5 +1,6 @@
 {
   "devDependencies": {
+    "element-ui": "^2.13.2",
     "vue": "^2.6.12",
     "vuepress": "^1.5.4"
   },
