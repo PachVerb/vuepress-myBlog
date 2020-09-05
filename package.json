@@ -19,5 +19,6 @@
     "@vuepress/theme-blog": "^2.3.2",
     "vuepress": "^1.5.4",
     "vuepress-plugin-disqus-comment": "^0.2.3"
-  }
+  },
+  "homepage": "https://github.com/PachVerb/vuepress-myBlog"
 }
