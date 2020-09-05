@@ -7,7 +7,7 @@
     "name": "PachVerb",
     "email": "1506262681@qq.com"
   },
-  "repository": "/myblob",
+  "repository": "https://github.com/PachVerb/vuepress-myBlog",
   "scripts": {
     "dev": "vuepress dev src",
     "build": "vuepress build src"

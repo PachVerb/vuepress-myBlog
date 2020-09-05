@@ -3,7 +3,6 @@ logs
 node_modules
 npm-debug.log
 coverage/
-run
 .DS_Store
 .nyc_output
 .basement
