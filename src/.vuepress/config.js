@@ -1,12 +1,14 @@
 const { description } = require('../../package')
 
 module.exports = {
+  base: '/',
   title: 'PachVerb | 网络日志',
   description: description,
   head: [
     ['meta', { name: 'theme-color', content: '#3eaf7c' }],
     ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
-    ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black' }]
+    ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black' }],
+    ['link', { rel: 'icon', href: '/logo.png' }]
   ],
   theme: '@vuepress/theme-blog', 
   themeConfig: {
@@ -55,7 +57,7 @@ module.exports = {
     frontmatters: [
       {
         id: 'tag',
-        keys: ['tag'],
+        keys: ['tag', 'tags'],
         path: '/tag/',
         layout: 'Tags',
         scopeLayout: 'Tag'
@@ -82,20 +84,20 @@ module.exports = {
           link: '',
         },
       ],
+    },
+    comment: {
+      service: 'vssue',
+      owner: 'PachVerb',
+      repo: 'vuepress-myBlog',
+      clientId: 'd128fdf9c4722b45c458',
+      clientSecret: 'eeba4b0e3be4029b247c32f4fe15bf2cd504bc45',
+    },
+    feed: {
+      canonical_base: 'http://localhost:8097'
     }
   },
   plugins: [
     ['@vuepress/plugin-back-to-top'],
-    ['@vuepress/plugin-medium-zoom'],
-    [
-      '@vssue/vuepress-plugin-vssue',
-      {
-        platform: 'github',
-        owner: 'PachVerb',
-        repo: 'vuepress-myBlog',
-        clientId: 'd128fdf9c4722b45c458',
-        clientSecret: 'eeba4b0e3be4029b247c32f4fe15bf2cd504bc45',
-      }
-    ],
+    ['@vuepress/plugin-medium-zoom']
   ]
 }

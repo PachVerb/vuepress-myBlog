@@ -17,7 +17,7 @@
     "@vssue/api-github-v3": "^1.4.4",
     "@vssue/vuepress-plugin-vssue": "^1.4.6",
     "@vuepress/theme-blog": "^2.3.2",
-    "vuepress": "^1.5.3",
+    "vuepress": "^1.5.4",
     "vuepress-plugin-disqus-comment": "^0.2.3"
   }
 }
