@@ -1,21 +1,4 @@
 {
-<<<<<<< HEAD
-  "devDependencies": {
-    "element-ui": "^2.13.2",
-    "vue": "^2.6.12",
-    "vuepress": "^1.5.4"
-  },
-  "scripts": {
-    "dev": "vuepress dev docs",
-    "build": "vuepress build docs"
-  },
-  "name": "myblog",
-  "version": "1.0.0",
-  "description": "这是我的个人站点",
-  "main": "index.js",
-  "author": "PachVerb",
-  "license": "MIT"
-=======
   "name": "myblob",
   "version": "0.0.1",
   "description": "just blog",
@@ -37,5 +20,4 @@
     "vuepress": "^1.5.3",
     "vuepress-plugin-disqus-comment": "^0.2.3"
   }
->>>>>>> chore:初始化配置
 }
