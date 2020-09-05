@@ -26,31 +26,40 @@ module.exports = {
       { text: '首页', link: '/'},
       { text: '编程', link: '/programm/'},
       { text: '阅读', link: '/reads/'},
-      { text: '标签', link: '/labels/'},
+      { text: '标签', link: '/tag/'},
       { text: '关于我', link: '/about/'},
       { text: 'Github', link: 'https://github.com/PachVerb/'}
     ],
     directories: [
       {
-        id: 'program',
+        id: 'programm',
         dirname: 'programm',
         path: '/programm/',
         title: '编程',
         frontmatter:{ //Front matter for entry page.
-          tag: 'vuepress'
+          tag: 'programm'
         },
         itemPermalink: '/programm/:year/:month/:day/:slug',
       },
       { 
-        id: 'reader',
+        id: 'reads',
         dirname: 'reads',
         path: '/reads/',
         title: '阅读',
         frontmatter:{ //Front matter for entry page.
-          tag: 'vuepress'
+          tag: 'read'
         },
         itemPermalink:  '/reads/:year/:month/:day/:slug',
       }
+    ],
+    frontmatters: [
+      {
+        id: 'tag',
+        keys: ['tag'],
+        path: '/tag/',
+        layout: 'Tags',
+        scopeLayout: 'Tag'
+      },
     ],
     footer: {
       contact: [
@@ -73,13 +82,6 @@ module.exports = {
           link: '',
         },
       ],
-    },
-    comment: {
-      service: 'github',
-      owner: 'PachVerb',
-      repo: 'vuepress-myBlog', 
-      clientId: 'd128fdf9c4722b45c458',
-      clientSecret: 'eeba4b0e3be4029b247c32f4fe15bf2cd504bc45',
     }
   },
   plugins: [
@@ -94,6 +96,6 @@ module.exports = {
         clientId: 'd128fdf9c4722b45c458',
         clientSecret: 'eeba4b0e3be4029b247c32f4fe15bf2cd504bc45',
       }
-    ]
+    ],
   ]
 }
