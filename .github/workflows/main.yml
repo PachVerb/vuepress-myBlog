@@ -6,7 +6,8 @@ name: publish Blog
 # events but only for the master branch
 on:
   push:
-    branches: master 
+    branches: 
+      - master 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   build-and-deploy:
@@ -16,17 +17,12 @@ jobs:
       # 拉取代码
       - name: Checkout
         uses: actions/checkout@v2
-        with:
-          persist-credentials: false
-
-      # 生成静态文件
-      - name: Build
-        run: yarn && yarn build
 
       # 部署到 GitHub Pages
       - name: Deploy
-        uses: JamesIves/github-pages-deploy-action@releases/v3
-        with:
+        uses: JamesIves/github-pages-deploy-action@master
+        env:
           ACCESS_TOKEN: ${{ secrets.TOKEN }}
           BRANCH: gh-pages
-          FOLDER: src/.vuepress/dist
+          FOLDER: build
+          BUILD_SCRIPT: yarn && yarn build
