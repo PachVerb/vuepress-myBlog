@@ -1,7 +1,7 @@
 ---
 title: home
 ---
-![An image](/index.jpg)
+![An image](/vuepress-myBlog/index.jpg)
 
 # 韩非子
 > 儒以文乱法， 侠以武犯禁
