@@ -1,7 +1,7 @@
 const { description } = require('../../package')
 
 module.exports = {
-  base: '/',
+  base: '/vuepress-myBlog',
   title: 'PachVerb | 网络日志',
   description: description,
   head: [
