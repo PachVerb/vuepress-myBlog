@@ -1,7 +1,7 @@
 ---
 title: home
 ---
-![An image]($withBase(/index.jpg))
+![An image]($withBase('/index.jpg'))
 
 # 韩非子
 > 儒以文乱法， 侠以武犯禁
