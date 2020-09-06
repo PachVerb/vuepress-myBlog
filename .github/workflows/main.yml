@@ -22,5 +22,5 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@3.5.9
         with:
           GITHUB_TOKEN: ${{ secrets.TOKEN }}
-          BRANCH: gh-pages # The branch the action should deploy to.
+          BRANCH: gh-pages 
           FOLDER: src/.vuepress/dist 
