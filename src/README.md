@@ -1,9 +1,9 @@
 ---
 title: home
 ---
-![An image](/index.jpg)
+![An image]($withBase(/index.jpg))
 
-# 个人座右铭
+# 韩非子
 > 儒以文乱法， 侠以武犯禁
 
 # 近期发表
