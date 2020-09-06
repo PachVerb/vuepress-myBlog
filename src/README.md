@@ -6,7 +6,7 @@ title: home
 # 个人座右铭
 > 儒以文乱法， 侠以武犯禁
 
-# 跟人作品收录
+# 近期发表
 - [vue](./programm/one.md)
 - [react](./programm/2018-11-7-frontmatter-in-vuepress.md)
 - [关于我](./about/index.md)
