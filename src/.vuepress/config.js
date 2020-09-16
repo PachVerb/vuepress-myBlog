@@ -21,7 +21,7 @@ module.exports = {
     globalPagination:{
       prevText:'上一頁', // Text for previous links.
       nextText:'下一頁', // Text for next links.
-      lengthPerPage:'2', // Maximum number of posts per page.
+      lengthPerPage:'4', // Maximum number of posts per page.
       layout:'Pagination', // Layout for pagination page
     },
     nav:[
