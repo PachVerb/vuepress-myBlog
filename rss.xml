@@ -4,7 +4,7 @@
         <title>PachVerb | 网络日志</title>
         <link>http://localhost:8097</link>
         <description>just blog</description>
-        <lastBuildDate>Sun, 13 Sep 2020 15:49:32 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 16 Sep 2020 16:56:02 GMT</lastBuildDate>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <generator>https://github.com/webmasterish/vuepress-plugin-feed</generator>
         <item>
@@ -15,6 +15,58 @@
             <description><![CDATA[Input 的 radio 类型元素默认渲染为小型圆圈图表，填充即为激活，类似于之前描述额复选框（checkbox）类型。单选按钮允许你选择单一的值来提交表单。
 >
 > > 注意：**复选框类似于单选按钮，但是有个重要的区别 - ...]]></description>
+        </item>
+        <item>
+            <title><![CDATA[预编译stylus学习]]></title>
+            <link>http://localhost:8097/programm/2020/09/14/stylus/</link>
+            <guid>http://localhost:8097/programm/2020/09/14/stylus/</guid>
+            <pubDate>Mon, 14 Sep 2020 00:00:00 GMT</pubDate>
+            <description><![CDATA[stylus采用py语法特点，即进突出。所以在stylus可以使用锁紧突出来省略 {. }打括号
+
+突出 为了掩饰，上述代码添加了 突出和缩进字样。
+
+规则集
+
+> 一次定义多个选择器情况，stylu ...]]></description>
+        </item>
+        <item>
+            <title><![CDATA[Vue3之事件学习]]></title>
+            <link>http://localhost:8097/programm/2020/09/14/vue%E4%BA%8B%E4%BB%B6/</link>
+            <guid>http://localhost:8097/programm/2020/09/14/vue%E4%BA%8B%E4%BB%B6/</guid>
+            <pubDate>Mon, 14 Sep 2020 00:00:00 GMT</pubDate>
+            <description><![CDATA[在事件绑定后传入多个事件处理程序，内链事件处理程序时，可以出入$event原始DOM事件对象
+
+  Submit
+
+methods: {
+  one(event) {
+    // first handler logic...
+  } ...]]></description>
+        </item>
+        <item>
+            <title><![CDATA[Eslint 学习笔记]]></title>
+            <link>http://localhost:8097/programm/2020/09/15/eslint%E5%AD%A6%E4%B9%A0/</link>
+            <guid>http://localhost:8097/programm/2020/09/15/eslint%E5%AD%A6%E4%B9%A0/</guid>
+            <pubDate>Tue, 15 Sep 2020 00:00:00 GMT</pubDate>
+            <description><![CDATA[通过yarn 或者 Npm 全局安装 ESlint工具
+
+> Npm:
+
+$ npm i -g eslint
+
+> yarn
+
+$ yarn add eslint global
+
+使用ESlint CLI
+
+eslint file1 file2....
+
+或:
+
+eslint dir/* or eslint "dir/*" ...]]></description>
+            <enclosure url="http://localhost:8097/./images/eslint_rulels.jpg">
+            </enclosure>
         </item>
         <item>
             <title><![CDATA[vue is powerful]]></title>
