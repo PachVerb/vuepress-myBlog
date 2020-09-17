@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>手动构建javascript测试环境 | PachVerb | 网络日志</title>
+    <meta name="generator" content="VuePress 1.5.4">
+    <link rel="icon" href="/vuepress-myBlog/logo.png">
+    <link rel="alternate" type="application/rss+xml" href="http://localhost:8097/rss.xml" title="PachVerb | 网络日志 RSS Feed">
+    <meta name="description" content="
+
+ jsvu
+
+   > 该工具由google公司开发，用于管理javascript引擎版本的交互式CLI
+
+ Eshost
+
+   > 提供运行脚本代码和javascript引擎的宿主环境
+
+eshost-cli
+
+  > 提供javascript引擎的宿主环境的交互式CLI
+
+工具(Mac OS)安装:
+
+npm i -g jsvu
+
+或
+
+` ...">
+    <meta name="theme-color" content="#3eaf7c">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="preload" href="/vuepress-myBlog/assets/css/0.styles.6a696121.css" as="style"><link rel="preload" href="/vuepress-myBlog/assets/js/app.d5c4059c.js" as="script"><link rel="preload" href="/vuepress-myBlog/assets/js/6.b654f31e.js" as="script"><link rel="preload" href="/vuepress-myBlog/assets/js/3.fc060444.js" as="script"><link rel="preload" href="/vuepress-myBlog/assets/js/10.7c6d0a70.js" as="script"><link rel="prefetch" href="/vuepress-myBlog/assets/js/11.61474593.js"><link rel="prefetch" href="/vuepress-myBlog/assets/js/12.1bc72497.js"><link rel="prefetch" href="/vuepress-myBlog/assets/js/13.656d8734.js"><link rel="prefetch" href="/vuepress-myBlog/assets/js/14.5e43b19b.js"><link rel="prefetch" href="/vuepress-myBlog/assets/js/15.d2e92d56.js"><link rel="prefetch" href="/vuepress-myBlog/assets/js/16.6bf24c49.js"><link rel="prefetch" href="/vuepress-myBlog/assets/js/17.7cb90ba0.js"><link rel="prefetch" href="/vuepress-myBlog/assets/js/18.b4c286de.js"><link rel="prefetch" href="/vuepress-myBlog/assets/js/19.ebe4c63e.js"><link rel="prefetch" href="/vuepress-myBlog/assets/js/20.16373bf5.js"><link rel="prefetch" href="/vuepress-myBlog/assets/js/21.a87c4928.js"><link rel="prefetch" href="/vuepress-myBlog/assets/js/22.e3f65ddb.js"><link rel="prefetch" href="/vuepress-myBlog/assets/js/23.d5d39a47.js"><link rel="prefetch" href="/vuepress-myBlog/assets/js/24.a34f6274.js"><link rel="prefetch" href="/vuepress-myBlog/assets/js/25.f6d84dad.js"><link rel="prefetch" href="/vuepress-myBlog/assets/js/26.3ae8ced4.js"><link rel="prefetch" href="/vuepress-myBlog/assets/js/4.efbbfb23.js"><link rel="prefetch" href="/vuepress-myBlog/assets/js/5.e74d1941.js"><link rel="prefetch" href="/vuepress-myBlog/assets/js/7.4d6b8d35.js"><link rel="prefetch" href="/vuepress-myBlog/assets/js/8.1620f6b9.js"><link rel="prefetch" href="/vuepress-myBlog/assets/js/9.58718c08.js"><link rel="prefetch" href="/vuepress-myBlog/assets/js/vuejs-paginate.96796e31.js">
+    <link rel="stylesheet" href="/vuepress-myBlog/assets/css/0.styles.6a696121.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div id="vuepress-theme-blog__global-layout"><section id="header-wrapper"><header id="header"><div class="header-wrapper"><div class="title"><a href="/vuepress-myBlog/" class="nav-link home-link">PachVerb | 网络日志 </a></div> <div class="header-right-wrap"><ul class="nav"><li class="nav-item"><a href="/vuepress-myBlog/" class="nav-link">首页</a></li><li class="nav-item"><a href="/vuepress-myBlog/programm/" class="nav-link router-link-active">编程</a></li><li class="nav-item"><a href="/vuepress-myBlog/reads/" class="nav-link">阅读</a></li><li class="nav-item"><a href="/vuepress-myBlog/tag/" class="nav-link">标签</a></li><li class="nav-item"><a href="/vuepress-myBlog/about/" class="nav-link">关于我</a></li><li class="nav-item"><a href="https://github.com/PachVerb/" target="_blank" rel="noopener noreferrer" class="nav-link external">Github</a></li></ul> <div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <a href="/rss.xml" class="feed"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rss"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg></a></div></div></header></section> <div id="mobile-header"><div class="mobile-header-bar"><div class="mobile-header-title"><a href="/vuepress-myBlog/" class="nav-link mobile-home-link">PachVerb | 网络日志 </a> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg></div> <div class="mobile-menu-wrapper"><hr class="menu-divider"> <ul class="mobile-nav"><li class="mobile-nav-item"><a href="/vuepress-myBlog/" class="nav-link">首页</a></li><li class="mobile-nav-item"><a href="/vuepress-myBlog/programm/" class="nav-link router-link-active">编程</a></li><li class="mobile-nav-item"><a href="/vuepress-myBlog/reads/" class="nav-link">阅读</a></li><li class="mobile-nav-item"><a href="/vuepress-myBlog/tag/" class="nav-link">标签</a></li><li class="mobile-nav-item"><a href="/vuepress-myBlog/about/" class="nav-link">关于我</a></li><li class="mobile-nav-item"><a href="https://github.com/PachVerb/" target="_blank" rel="noopener noreferrer" class="nav-link external">Github</a></li> <li class="mobile-nav-item"><a href="/rss.xml" class="feed"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rss"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg></a></li></ul></div></div></div> <div class="content-wrapper"><div id="vuepress-theme-blog__post-layout"><article itemscope="itemscope" itemtype="https://schema.org/BlogPosting" class="vuepress-blog-theme-content"><header><h1 itemprop="name headline" class="post-title">
+        手动构建javascript测试环境
+      </h1> <div class="post-meta"><div itemprop="publisher author" itemtype="http://schema.org/Person" itemscope="itemscope" class="post-meta-author"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-navigation"><polygon points="3 11 22 2 13 21 11 13 3 11"></polygon></svg> <span itemprop="name">Pachverb</span> <span itemprop="address">   in 川信</span></div> <div class="post-meta-date"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg> <time pubdate itemprop="datePublished" datetime="2020-09-17T00:00:00.000Z">
+      Thu Sep 17 2020
+    </time></div> <ul itemprop="keywords" class="post-meta-tags"><li class="post-tag" data-v-42ccfcd5><a href="/vuepress-myBlog/tag/-JavaScript" data-v-42ccfcd5><span data-v-42ccfcd5>-JavaScript</span></a></li></ul></div></header> <div itemprop="articleBody" class="content__default"><h2 id="准备工具"><a href="#准备工具" class="header-anchor">#</a> 准备工具</h2> <ul><li><p>jsvu</p> <blockquote><p>该工具由google公司开发，用于管理javascript引擎版本的交互式CLI</p></blockquote></li> <li><p>Eshost</p> <blockquote><p>提供运行脚本代码和javascript引擎的宿主环境</p></blockquote></li> <li><p>eshost-cli</p> <blockquote><p>提供javascript引擎的宿主环境的交互式CLI</p></blockquote></li></ul> <h2 id="工具-mac-os-安装"><a href="#工具-mac-os-安装" class="header-anchor">#</a> 工具(Mac OS)安装:</h2> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">npm</span> i -g jsvu 
+</code></pre></div><p>或</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">yarn</span> <span class="token function">add</span> jsvu global
+</code></pre></div><p>安装引擎</p> <p>通过tsvu工具安装js引擎(Mac os)</p> <div class="language-bash extra-class"><pre class="language-bash"><code>tsvu 
+
+<span class="token comment"># 指定版本安装</span>
+<span class="token comment"># tsvu engin-name@versions</span>
+tsvu chakra@7.x
+</code></pre></div><p>macos系统下此命名行会提示合适的主机版本，以及所要安装的js引擎</p> <p><em>Note: 指定版本安装，如果指定版本本身不存在，会提示报错</em></p> <p><strong>目前官方支持的js引擎列表</strong></p> <p><img src="/vuepress-myBlog/assets/img/0917.7623a0af.jpg" alt="ltem"></p> <h2 id="装载安装的js-engines"><a href="#装载安装的js-engines" class="header-anchor">#</a> 装载安装的js Engines</h2> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token comment"># mac os</span>
+<span class="token comment"># 指定装载版本</span>
+eshost --add <span class="token string">'Chakra'</span> ～/.jsvu/chakra
+
+<span class="token comment"># 全部装载</span>
+eshost --configure-jsvu
+</code></pre></div><p>下载的安装文件路径在</p> <p>/Users/[home]/.jsvu/</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token comment"># 指定表达式</span>
+eshost -e <span class="token string">&quot;1+1&quot;</span>
+
+<span class="token comment"># 指定语句</span>
+eshost -tsx <span class="token string">'print(1+2)'</span>
+
+<span class="token comment"># 指定文件</span>
+eshost -ts <span class="token string">'test.js'</span>
+
+<span class="token comment"># 指定引擎运行代码</span>
+eshost -h <span class="token string">'1+1'</span>
+</code></pre></div><h2 id="engins管理"><a href="#engins管理" class="header-anchor">#</a> engins管理</h2> <div class="language- extra-class"><pre class="language-text"><code>tsvu --engines = chakra, javascriptCore...
+</code></pre></div><p>Tips: 指定需要管理的引擎版本，不再列表之类的不会执行更新， 因直接执行```jsvu``会更新所有安装引擎。</p> <h2 id="参考"><a href="#参考" class="header-anchor">#</a> 参考</h2> <p><a href="https://github.com/GoogleChromeLabs/jsvu" target="_blank" rel="noopener noreferrer">jsvu_repo<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p> <p><a href="https://github.com/bterlson/eshost#installing-engines" target="_blank" rel="noopener noreferrer">eshost_repo<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p> <p><a href="https://github.com/bterlson/eshost-cli" target="_blank" rel="noopener noreferrer">eshost-cli_repo<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p></div> <footer><!----> <hr> <!----></footer></article> <div class="sticker vuepress-toc"><div class="vuepress-toc-item vuepress-toc-h2 active"><a href="#准备工具" title="准备工具">准备工具</a></div><div class="vuepress-toc-item vuepress-toc-h2"><a href="#工具-mac-os-安装" title="工具(Mac OS)安装:">工具(Mac OS)安装:</a></div><div class="vuepress-toc-item vuepress-toc-h2"><a href="#装载安装的js-engines" title="装载安装的js Engines">装载安装的js Engines</a></div><div class="vuepress-toc-item vuepress-toc-h2"><a href="#engins管理" title="engins管理">engins管理</a></div><div class="vuepress-toc-item vuepress-toc-h2"><a href="#参考" title="参考">参考</a></div></div></div></div> <footer class="footer" data-v-fdbf4940><div class="footer-left-wrap" data-v-fdbf4940><ul class="contact" data-v-fdbf4940><li class="contact-item" data-v-fdbf4940><a href="https://github.com/vuejs/vuepress" target="_blank" rel="noopener noreferrer" class="nav-link external" data-v-fdbf4940><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github" data-v-fdbf4940><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" data-v-fdbf4940></path></svg>
+          
+        </a></li><li class="contact-item" data-v-fdbf4940><a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" class="nav-link external" data-v-fdbf4940><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-youtube" data-v-fdbf4940><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z" data-v-fdbf4940></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" data-v-fdbf4940></polygon></svg>
+          
+        </a></li></ul></div> <div class="footer-right-wrap" data-v-fdbf4940><ul class="copyright" data-v-fdbf4940><li class="copyright-item" data-v-fdbf4940><a href="https://policies.google.com/privacy?hl=en-US" target="_blank" rel="noopener noreferrer" class="nav-link external" data-v-fdbf4940>Privacy Policy</a></li><li class="copyright-item" data-v-fdbf4940><a href="/vuepress-myBlog/programm/2020/09/17/javasciptcore/.html" class="nav-link" data-v-fdbf4940>MIT Licensed | Copyright © 2020 PachVerb</a></li></ul></div></footer></div><div class="global-ui"></div></div>
+    <script src="/vuepress-myBlog/assets/js/app.d5c4059c.js" defer></script><script src="/vuepress-myBlog/assets/js/6.b654f31e.js" defer></script><script src="/vuepress-myBlog/assets/js/3.fc060444.js" defer></script><script src="/vuepress-myBlog/assets/js/10.7c6d0a70.js" defer></script>
+  </body>
+</html>

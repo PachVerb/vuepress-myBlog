@@ -4,7 +4,7 @@
         <title>PachVerb | 网络日志</title>
         <link>http://localhost:8097</link>
         <description>just blog</description>
-        <lastBuildDate>Wed, 16 Sep 2020 17:22:13 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 17 Sep 2020 16:00:04 GMT</lastBuildDate>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <generator>https://github.com/webmasterish/vuepress-plugin-feed</generator>
         <item>
@@ -66,6 +66,33 @@ eslint file1 file2....
 
 eslint dir/* or eslint "dir/*" ...]]></description>
             <enclosure url="http://localhost:8097/./images/eslint_rulels.jpg">
+            </enclosure>
+        </item>
+        <item>
+            <title><![CDATA[手动构建javascript测试环境]]></title>
+            <link>http://localhost:8097/programm/2020/09/17/javasciptcore/</link>
+            <guid>http://localhost:8097/programm/2020/09/17/javasciptcore/</guid>
+            <pubDate>Thu, 17 Sep 2020 00:00:00 GMT</pubDate>
+            <description><![CDATA[jsvu
+
+   > 该工具由google公司开发，用于管理javascript引擎版本的交互式CLI
+
+ Eshost
+
+   > 提供运行脚本代码和javascript引擎的宿主环境
+
+eshost-cli
+
+  > 提供javascript引擎的宿主环境的交互式CLI
+
+工具(Mac OS)安装:
+
+npm i -g jsvu
+
+或
+
+` ...]]></description>
+            <enclosure url="http://localhost:8097/./images/0917.jpg">
             </enclosure>
         </item>
         <item>
