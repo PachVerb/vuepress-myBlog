@@ -4,7 +4,7 @@
         <title>PachVerb | 网络日志</title>
         <link>http://localhost:8097</link>
         <description>just blog</description>
-        <lastBuildDate>Thu, 17 Sep 2020 16:00:04 GMT</lastBuildDate>
+        <lastBuildDate>Sun, 20 Sep 2020 14:25:46 GMT</lastBuildDate>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <generator>https://github.com/webmasterish/vuepress-plugin-feed</generator>
         <item>
@@ -96,20 +96,6 @@ npm i -g jsvu
             </enclosure>
         </item>
         <item>
-            <title><![CDATA[vue is powerful]]></title>
-            <link>http://localhost:8097/programm/2020/09/03/one/</link>
-            <guid>http://localhost:8097/programm/2020/09/03/one/</guid>
-            <pubDate>Thu, 03 Sep 2020 00:00:00 GMT</pubDate>
-            <description><![CDATA[Vue 是目前web应用开发，前端主流的渐进式框架。 作者是我们的尤雨曦 ...]]></description>
-        </item>
-        <item>
-            <title><![CDATA[Hello World]]></title>
-            <link>http://localhost:8097/programm/2020/09/03/two/</link>
-            <guid>http://localhost:8097/programm/2020/09/03/two/</guid>
-            <pubDate>Thu, 03 Sep 2020 00:00:00 GMT</pubDate>
-            <description><![CDATA[today is very cool ...]]></description>
-        </item>
-        <item>
             <title><![CDATA[React is powerful]]></title>
             <link>http://localhost:8097/reads/2020/09/03/two/</link>
             <guid>http://localhost:8097/reads/2020/09/03/two/</guid>
@@ -129,6 +115,21 @@ npm i -g jsvu
             <link>http://localhost:8097/reads/2020/09/04/tree-md/</link>
             <guid>http://localhost:8097/reads/2020/09/04/tree-md/</guid>
             <pubDate>Fri, 04 Sep 2020 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[linux包管理yum]]></title>
+            <link>http://localhost:8097/reads/2020/09/20/linux%E5%8C%85%E7%AE%A1%E7%90%86/</link>
+            <guid>http://localhost:8097/reads/2020/09/20/linux%E5%8C%85%E7%AE%A1%E7%90%86/</guid>
+            <pubDate>Sun, 20 Sep 2020 00:00:00 GMT</pubDate>
+            <description><![CDATA[wek
+历史
+> 每一个linux发行版都有对应的软件包管理器，用于安装，更新，查看，搜索和删除软件包。由于个人管理的服务器版本是centos版， 本期演示centos8 平台的包管理器, 并对比rpm包管理。
+在介绍yum包管理器之前，现简单说说rpm。这两者多少存在一些联系
+
+RPM
+> rpm 是基于Red Hat系统所设计的包管理工 ...]]></description>
+            <enclosure url="http://localhost:8097/./images/01wek.jpg">
+            </enclosure>
         </item>
     </channel>
 </rss>
