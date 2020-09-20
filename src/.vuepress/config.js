@@ -38,7 +38,7 @@ module.exports = {
         dirname: 'programm',
         path: '/programm/',
         title: '编程',
-        frontmatter:{ //Front matter for entry page.
+        frontmatter:{ 
           tag: 'programm'
         },
         itemPermalink: '/programm/:year/:month/:day/:slug',
@@ -48,8 +48,8 @@ module.exports = {
         dirname: 'technology',
         path: '/technology/',
         title: '技术',
-        frontmatter:{ //Front matter for entry page.
-          tag: 'read'
+        frontmatter:{ 
+          tag: 'technology'
         },
         itemPermalink:  '/reads/:year/:month/:day/:slug',
       },
@@ -58,7 +58,7 @@ module.exports = {
         dirname: 'reads',
         path: '/reads/',
         title: '阅读',
-        frontmatter:{ //Front matter for entry page.
+        frontmatter:{ 
           tag: 'read'
         },
         itemPermalink:  '/reads/:year/:month/:day/:slug',
