@@ -27,6 +27,7 @@ module.exports = {
     nav:[
       { text: '首页', link: '/'},
       { text: '编程', link: '/programm/'},
+      { text: '技术', link: '/technology/'},
       { text: '阅读', link: '/reads/'},
       { text: '标签', link: '/tag/'},
       { text: '关于我', link: '/about/'},
@@ -51,7 +52,7 @@ module.exports = {
         frontmatter:{ 
           tag: 'technology'
         },
-        itemPermalink:  '/reads/:year/:month/:day/:slug',
+        itemPermalink:  '/technology/:year/:month/:day/:slug',
       },
       { 
         id: 'reads',
