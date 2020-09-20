@@ -44,6 +44,16 @@ module.exports = {
         itemPermalink: '/programm/:year/:month/:day/:slug',
       },
       { 
+        id: 'technology',
+        dirname: 'technology',
+        path: '/technology/',
+        title: '技术',
+        frontmatter:{ //Front matter for entry page.
+          tag: 'read'
+        },
+        itemPermalink:  '/reads/:year/:month/:day/:slug',
+      },
+      { 
         id: 'reads',
         dirname: 'reads',
         path: '/reads/',
@@ -52,7 +62,7 @@ module.exports = {
           tag: 'read'
         },
         itemPermalink:  '/reads/:year/:month/:day/:slug',
-      }
+      },
     ],
     frontmatters: [
       {
