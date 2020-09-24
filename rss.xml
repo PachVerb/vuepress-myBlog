@@ -4,7 +4,7 @@
         <title>PachVerb | 网络日志</title>
         <link>http://localhost:8097</link>
         <description>just blog</description>
-        <lastBuildDate>Thu, 24 Sep 2020 09:55:21 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 24 Sep 2020 10:20:14 GMT</lastBuildDate>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <generator>https://github.com/webmasterish/vuepress-plugin-feed</generator>
         <item>
@@ -136,12 +136,12 @@ RPM
             <link>http://localhost:8097/technology/2020/09/24/github%E6%8C%81%E7%BB%AD%E9%9B%86%E6%88%90/</link>
             <guid>http://localhost:8097/technology/2020/09/24/github%E6%8C%81%E7%BB%AD%E9%9B%86%E6%88%90/</guid>
             <pubDate>Thu, 24 Sep 2020 00:00:00 GMT</pubDate>
-            <description><![CDATA[github actions同其他持续集成工具一样，trivas CI. actions也拥有 拉去代码，运行测试，登陆远程服务器共能，发布到第三方服务.
+            <description><![CDATA[img
+介绍
+github actions同其他持续集成工具一样，trivas CI. actions也拥有 拉去代码，运行测试，登陆远程服务器共能，发布到第三方服务.
 
-github actions的一次工作流是通过项目 .github/workflow目录下的 .yml格式文件来指定具体的工作流程的。在每次像远程交付代码时，后台就会检测此目录中的文件，来触发相应工作流程。
-
-workflow基本流程 ...]]></description>
-            <enclosure url="http://localhost:8097/./images/action-name.png">
+github actions的一次工作流是通过项目 .github/workflow目录下的 .yml格式文件来指定具体的工作流程的。在每 ...]]></description>
+            <enclosure url="http://localhost:8097/./images/14372881729_9eac0a7fa5_b.jpg">
             </enclosure>
         </item>
     </channel>
