@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>github Actions使用介绍 | PachVerb | 网络日志</title>
+    <meta name="generator" content="VuePress 1.5.4">
+    <link rel="icon" href="/vuepress-myBlog/logo.png">
+    <link rel="alternate" type="application/rss+xml" href="http://localhost:8097/rss.xml" title="PachVerb | 网络日志 RSS Feed">
+    <meta name="description" content="
+github actions同其他持续集成工具一样，trivas CI. actions也拥有 拉去代码，运行测试，登陆远程服务器共能，发布到第三方服务.
+
+github actions的一次工作流是通过项目 .github/workflow目录下的 .yml格式文件来指定具体的工作流程的。在每次像远程交付代码时，后台就会检测此目录中的文件，来触发相应工作流程。
+
+workflow基本流程 ...">
+    <meta name="theme-color" content="#3eaf7c">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="preload" href="/vuepress-myBlog/assets/css/0.styles.6a696121.css" as="style"><link rel="preload" href="/vuepress-myBlog/assets/js/app.f06f9b8c.js" as="script"><link rel="preload" href="/vuepress-myBlog/assets/js/6.951b94cc.js" as="script"><link rel="preload" href="/vuepress-myBlog/assets/js/3.25563d97.js" as="script"><link rel="preload" href="/vuepress-myBlog/assets/js/8.6ad60594.js" as="script"><link rel="prefetch" href="/vuepress-myBlog/assets/js/10.e37f83f1.js"><link rel="prefetch" href="/vuepress-myBlog/assets/js/11.6be2cb37.js"><link rel="prefetch" href="/vuepress-myBlog/assets/js/12.987c7a7d.js"><link rel="prefetch" href="/vuepress-myBlog/assets/js/13.d9bb769b.js"><link rel="prefetch" href="/vuepress-myBlog/assets/js/14.62f16298.js"><link rel="prefetch" href="/vuepress-myBlog/assets/js/15.671126a6.js"><link rel="prefetch" href="/vuepress-myBlog/assets/js/16.91bc54d9.js"><link rel="prefetch" href="/vuepress-myBlog/assets/js/17.d8c25d2f.js"><link rel="prefetch" href="/vuepress-myBlog/assets/js/18.541f24c6.js"><link rel="prefetch" href="/vuepress-myBlog/assets/js/19.24304fad.js"><link rel="prefetch" href="/vuepress-myBlog/assets/js/20.405ca095.js"><link rel="prefetch" href="/vuepress-myBlog/assets/js/21.5e23e0ab.js"><link rel="prefetch" href="/vuepress-myBlog/assets/js/22.bd54413f.js"><link rel="prefetch" href="/vuepress-myBlog/assets/js/23.0e3f94d3.js"><link rel="prefetch" href="/vuepress-myBlog/assets/js/24.4e5737b0.js"><link rel="prefetch" href="/vuepress-myBlog/assets/js/25.574c3725.js"><link rel="prefetch" href="/vuepress-myBlog/assets/js/26.7e6b82d2.js"><link rel="prefetch" href="/vuepress-myBlog/assets/js/4.2d69a237.js"><link rel="prefetch" href="/vuepress-myBlog/assets/js/5.0c746c49.js"><link rel="prefetch" href="/vuepress-myBlog/assets/js/7.efd41027.js"><link rel="prefetch" href="/vuepress-myBlog/assets/js/9.48c503d2.js"><link rel="prefetch" href="/vuepress-myBlog/assets/js/vuejs-paginate.ad492ecd.js">
+    <link rel="stylesheet" href="/vuepress-myBlog/assets/css/0.styles.6a696121.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div id="vuepress-theme-blog__global-layout"><section id="header-wrapper"><header id="header"><div class="header-wrapper"><div class="title"><a href="/vuepress-myBlog/" class="nav-link home-link">PachVerb | 网络日志 </a></div> <div class="header-right-wrap"><ul class="nav"><li class="nav-item"><a href="/vuepress-myBlog/" class="nav-link">首页</a></li><li class="nav-item"><a href="/vuepress-myBlog/programm/" class="nav-link">编程</a></li><li class="nav-item"><a href="/vuepress-myBlog/technology/" class="nav-link router-link-active">技术</a></li><li class="nav-item"><a href="/vuepress-myBlog/reads/" class="nav-link">阅读</a></li><li class="nav-item"><a href="/vuepress-myBlog/tag/" class="nav-link">标签</a></li><li class="nav-item"><a href="/vuepress-myBlog/about/" class="nav-link">关于我</a></li><li class="nav-item"><a href="https://github.com/PachVerb/" target="_blank" rel="noopener noreferrer" class="nav-link external">Github</a></li></ul> <div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <a href="/rss.xml" class="feed"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rss"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg></a></div></div></header></section> <div id="mobile-header"><div class="mobile-header-bar"><div class="mobile-header-title"><a href="/vuepress-myBlog/" class="nav-link mobile-home-link">PachVerb | 网络日志 </a> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg></div> <div class="mobile-menu-wrapper"><hr class="menu-divider"> <ul class="mobile-nav"><li class="mobile-nav-item"><a href="/vuepress-myBlog/" class="nav-link">首页</a></li><li class="mobile-nav-item"><a href="/vuepress-myBlog/programm/" class="nav-link">编程</a></li><li class="mobile-nav-item"><a href="/vuepress-myBlog/technology/" class="nav-link router-link-active">技术</a></li><li class="mobile-nav-item"><a href="/vuepress-myBlog/reads/" class="nav-link">阅读</a></li><li class="mobile-nav-item"><a href="/vuepress-myBlog/tag/" class="nav-link">标签</a></li><li class="mobile-nav-item"><a href="/vuepress-myBlog/about/" class="nav-link">关于我</a></li><li class="mobile-nav-item"><a href="https://github.com/PachVerb/" target="_blank" rel="noopener noreferrer" class="nav-link external">Github</a></li> <li class="mobile-nav-item"><a href="/rss.xml" class="feed"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rss"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg></a></li></ul></div></div></div> <div class="content-wrapper"><div id="vuepress-theme-blog__post-layout"><article itemscope="itemscope" itemtype="https://schema.org/BlogPosting" class="vuepress-blog-theme-content"><header><h1 itemprop="name headline" class="post-title">
+        github Actions使用介绍
+      </h1> <div class="post-meta"><div itemprop="publisher author" itemtype="http://schema.org/Person" itemscope="itemscope" class="post-meta-author"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-navigation"><polygon points="3 11 22 2 13 21 11 13 3 11"></polygon></svg> <span itemprop="name">pachverb</span> <span itemprop="address">   in 川信</span></div> <div class="post-meta-date"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg> <time pubdate itemprop="datePublished" datetime="2020-09-24T00:00:00.000Z">
+      Thu Sep 24 2020
+    </time></div> <ul itemprop="keywords" class="post-meta-tags"><li class="post-tag" data-v-42ccfcd5><a href="/vuepress-myBlog/tag/CI" data-v-42ccfcd5><span data-v-42ccfcd5>CI</span></a></li></ul></div></header> <div itemprop="articleBody" class="content__default"><h2 id="介绍"><a href="#介绍" class="header-anchor">#</a> 介绍</h2> <p>github actions同其他持续集成工具一样，trivas CI. actions也拥有 拉去代码，运行测试，登陆远程服务器共能，发布到第三方服务.</p> <p>github actions的一次工作流是通过项目 .github/workflow目录下的 .yml格式文件来指定具体的工作流程的。在每次像远程交付代码时，后台就会检测此目录中的文件，来触发相应工作流程。</p> <h2 id="workflow基本流程板块"><a href="#workflow基本流程板块" class="header-anchor">#</a> workflow基本流程板块</h2> <p>（1）workflow （工作流程）：持续集成一次运行的过程，就是一个 workflow。</p> <p>（2）job （任务）：一个 workflow 由一个或多个 jobs 构成，含义是一次持续集成的运行，可以完成多个任务。</p> <p>（3）step（步骤）：每个 job 由多个 step 构成，一步步完成。</p> <p>（4）action （动作）：每个 step 可以依次执行一个或多个命令（action）。</p> <h2 id="语法"><a href="#语法" class="header-anchor">#</a> 语法</h2> <blockquote><p>由于workflow配置很多，只做基本配置介绍。此处以我的一个项目的workflow配置为列,。</p></blockquote> <div class="language- extra-class"><pre class="language-text"><code># 我的博客项目自动化配置
+name: publish Blog
+on:
+  push:
+    branches: 
+      - master 
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2.3.1
+        with:
+          persist-credentials: false
+
+      - name: Install and Build 
+        run: |
+          yarn
+          yarn build
+
+      - name: Deploy 
+        uses: JamesIves/github-pages-deploy-action@3.5.9
+        with:
+          GITHUB_TOKEN: ${{ secrets.TOKEN }}
+          BRANCH: gh-pages 
+          FOLDER: src/.vuepress/dist 
+</code></pre></div><ol><li>name</li></ol> <blockquote><p>表示一次workflow工作流的命名。</p></blockquote> <p>具体结果可在github仓库主页的actions选项可查, 比如我的
+<img src="/vuepress-myBlog/assets/img/action-name.469feea2.png" alt="images"></p> <ol start="2"><li>on</li></ol> <blockquote><p>workflow触发条件。可以是字符串，也可以是数组.</p></blockquote> <p>配置方式
+(1) 单个事件
+如上我的项目中的workflow文件就是单个事件类型的配置, 而且指配置master分支作为触发条件</p> <p>pull_request和 push两种事件类型，可以配置branch 和tag字段作为触发条件</p> <p>比如</p> <div class="language- extra-class"><pre class="language-text"><code>on:
+  push:
+    branches:    
+      - master
+      - 'mona/octocat'
+      - 'releases/**'
+    tags:        
+      - v1             
+      - v1.*          
+</code></pre></div><p>(2) 事件列表
+不需要精细配置每个webhook</p> <div class="language- extra-class"><pre class="language-text"><code>on: [push, pull_request]
+</code></pre></div><p>(3) 事件列表且活动类型配置
+针对release事件类型，存在 published，unpublished，created，edited，deleted，或prereleasedd多种活动类型。</p> <div class="language- extra-class"><pre class="language-text"><code>on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+  page_build:
+  release:
+    types: # 该配置下存在活动类型配置
+      - created
+</code></pre></div><p>针对上述release事件类型,所拥有的活动类型
+<img src="/vuepress-myBlog/assets/img/release-types.de301dc6.png" alt="img"></p> <ol start="3"><li>jobs</li></ol> <blockquote><p>指定一次workflow需要完成的具体任务。</p></blockquote> <p>jobs.&lt;job_id&gt;</p> <p>可以指定一个或多个任务,任务对应 指定的job.id。每一个任务包括一个或多个steps.</p> <p>jobs.&lt;job_id&gt;.name
+显示在GitHub上的作业名称。</p> <p>jobs.&lt;job_id&gt;.needs
+默认情况下，作业并行运行。要顺序运行作业，可以使用jobs.&lt;job_id&gt;.needs关键字定义对其他作业的依赖关系。</p> <div class="language- extra-class"><pre class="language-text"><code>jobs:
+  job1:
+  job2:
+    needs: job1
+  job3:
+    needs: [job1, job2]
+</code></pre></div><p>jobs.&lt;job_id&gt;.runs-on
+指定作业运行的机器类型, 该机器可以是GitHub托管的运行程序，也可以是自托管的运行程序。<strong>必须在每个任务之前指定该字段</strong></p> <p>如上，我的workflow就指定了github内置机型 <code>ubuntu-latest</code></p> <p><img src="/vuepress-myBlog/assets/img/github_computer.70b91b86.png" alt="img"></p> <p>jobs.&lt;job_id&gt;.steps</p> <blockquote><p>设置一次任务完成，所涉及的步骤. 可以包括一个或多个steps。注意这玩意儿过度开销是会被官方监控的，收费。</p></blockquote> <p>每一个步骤所包含流程</p> <ul><li>jobs.&lt;job_id&gt;.steps.name：步骤名称。</li> <li>jobs.&lt;job_id&gt;.steps.run：该步骤运行的命令或者 action。</li> <li>jobs.&lt;job_id&gt;.steps.env：该步骤所需的环境变量。</li></ul> <h2 id="实战"><a href="#实战" class="header-anchor">#</a> 实战</h2> <p>我的博客项目workflow, 使用github actions自动化没部署到github pages</p> <p>流程:</p> <ol><li><p>在github开通blog的github repo. 我看网上很多教程在创建远程仓库的时候都是将 仓库名设置为 一个特殊仓库 如[你的github账号名称].github.io。个人实践完全不需要，不影响项目部署。 这个服务是官方提供，仓库的文件资源，最后都是官方检测资源依赖关系并生成站点的。</p></li> <li><p>初始化完成后，还需要创建一个空分支，gh-pgs. 这是官方github pages服务部署的指定分支</p></li> <li><p>设置个人开发令牌
+步骤: 个人github主页--&gt; 点击头像在菜单中选择 setting --&gt; 新切换页面中 点击 develper-setting --&gt; 新进页面中 点击 Personal access tokens -- 创建 一个新令牌即可。 最后在仓库中添加令牌</p></li> <li><p>在仓库中创建一个空workflow文件，在pull到本地进行配置</p></li></ol> <p>完成配置，推送即可</p> <p>我的blog项目workflow配置</p> <div class="language- extra-class"><pre class="language-text"><code>name: publish Blog
+on:
+  push:
+    branches: 
+      - master 
+jobs:
+  build-and-deploy:
+    name: build_deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2.3.1
+        with:
+          persist-credentials: false
+
+      - name: Install and Build 
+        run: |
+          yarn
+          yarn build
+
+      - name: Deploy 
+        uses: JamesIves/github-pages-deploy-action@3.5.9
+        with:
+          GITHUB_TOKEN: ${{ secrets.TOKEN }}
+          BRANCH: gh-pages 
+          FOLDER: src/.vuepress/dist 
+
+</code></pre></div><h2 id="参考"><a href="#参考" class="header-anchor">#</a> 参考</h2> <p><a href="https://docs.github.com/en/actions/reference/workflow-syntax-for-github-actions" target="_blank" rel="noopener noreferrer">官方Github Actions DOCS<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p> <h2 id="结语"><a href="#结语" class="header-anchor">#</a> 结语</h2> <p>后期会更新其他持续集成工具，欢迎下方留言评论，谢谢</p></div> <footer><!----> <hr> <!----></footer></article> <div class="sticker vuepress-toc"><div class="vuepress-toc-item vuepress-toc-h2 active"><a href="#介绍" title="介绍">介绍</a></div><div class="vuepress-toc-item vuepress-toc-h2"><a href="#workflow基本流程板块" title="workflow基本流程板块">workflow基本流程板块</a></div><div class="vuepress-toc-item vuepress-toc-h2"><a href="#语法" title="语法">语法</a></div><div class="vuepress-toc-item vuepress-toc-h2"><a href="#实战" title="实战">实战</a></div><div class="vuepress-toc-item vuepress-toc-h2"><a href="#参考" title="参考">参考</a></div><div class="vuepress-toc-item vuepress-toc-h2"><a href="#结语" title="结语">结语</a></div></div></div></div> <footer class="footer" data-v-fdbf4940><div class="footer-left-wrap" data-v-fdbf4940><ul class="contact" data-v-fdbf4940><li class="contact-item" data-v-fdbf4940><a href="https://github.com/vuejs/vuepress" target="_blank" rel="noopener noreferrer" class="nav-link external" data-v-fdbf4940><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github" data-v-fdbf4940><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" data-v-fdbf4940></path></svg>
+          
+        </a></li><li class="contact-item" data-v-fdbf4940><a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" class="nav-link external" data-v-fdbf4940><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-youtube" data-v-fdbf4940><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z" data-v-fdbf4940></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" data-v-fdbf4940></polygon></svg>
+          
+        </a></li></ul></div> <div class="footer-right-wrap" data-v-fdbf4940><ul class="copyright" data-v-fdbf4940><li class="copyright-item" data-v-fdbf4940><a href="https://policies.google.com/privacy?hl=en-US" target="_blank" rel="noopener noreferrer" class="nav-link external" data-v-fdbf4940>Privacy Policy</a></li><li class="copyright-item" data-v-fdbf4940><a href="/vuepress-myBlog/technology/2020/09/24/github%E6%8C%81%E7%BB%AD%E9%9B%86%E6%88%90/.html" class="nav-link" data-v-fdbf4940>MIT Licensed | Copyright © 2020 PachVerb</a></li></ul></div></footer></div><div class="global-ui"></div></div>
+    <script src="/vuepress-myBlog/assets/js/app.f06f9b8c.js" defer></script><script src="/vuepress-myBlog/assets/js/6.951b94cc.js" defer></script><script src="/vuepress-myBlog/assets/js/3.25563d97.js" defer></script><script src="/vuepress-myBlog/assets/js/8.6ad60594.js" defer></script>
+  </body>
+</html>
