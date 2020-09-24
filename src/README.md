@@ -1,14 +1,12 @@
 ---
 title: home
 ---
-![An image](/vuepress-myBlog/index.jpg)
+![An image](/vuepress-myBlog/pier-on-sunny-day-in-diminishing-perspective.jpg)
 
-# 韩非子
-> 儒以文乱法， 侠以武犯禁
 
 # 近期发表
-- [vue](./programm/one.md)
-- [react](./programm/2018-11-7-frontmatter-in-vuepress.md)
+- [CI](./technology/2020209-24-github持续集成.md)
+- [ESLint](./programm/2020-9-15-ESlint学习.md)
 - [关于我](./about/index.md)
 
 # 构建
