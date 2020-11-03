@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>尝鲜ES2020新特性 | PachVerb | 网络日志</title>
+    <meta name="generator" content="VuePress 1.5.4">
+    <link rel="icon" href="/vuepress-myBlog/logo.png">
+    <link rel="alternate" type="application/rss+xml" href="http://localhost:8097/rss.xml" title="PachVerb | 网络日志 RSS Feed">
+    <meta name="description" content="img
+写在前面
+又有很长时间没有发表文章了。其实原计划定于每周发表一篇文章，刚开始觉得这样的频率还好。慢慢的觉得这样的更新效率有点频繁, 也就没在坚持。今天突然翻了翻自己的的博客， 觉着自己写的东西，虽然不是啥大作品，个人觉着还是挺不错的。做程序开发，不管再忙。博客还是得写，哪怕频率拉长一点都可以。废话 ...">
+    <meta name="theme-color" content="#3eaf7c">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="preload" href="/vuepress-myBlog/assets/css/0.styles.6a696121.css" as="style"><link rel="preload" href="/vuepress-myBlog/assets/js/app.1a1a3623.js" as="script"><link rel="preload" href="/vuepress-myBlog/assets/js/7.aebf1908.js" as="script"><link rel="preload" href="/vuepress-myBlog/assets/js/3.a8bf2d9b.js" as="script"><link rel="preload" href="/vuepress-myBlog/assets/js/11.df003527.js" as="script"><link rel="prefetch" href="/vuepress-myBlog/assets/js/10.1b92f346.js"><link rel="prefetch" href="/vuepress-myBlog/assets/js/12.4428364b.js"><link rel="prefetch" href="/vuepress-myBlog/assets/js/13.9395708c.js"><link rel="prefetch" href="/vuepress-myBlog/assets/js/14.27091db4.js"><link rel="prefetch" href="/vuepress-myBlog/assets/js/15.3f8efdab.js"><link rel="prefetch" href="/vuepress-myBlog/assets/js/16.5bf3d99e.js"><link rel="prefetch" href="/vuepress-myBlog/assets/js/17.9c3b30db.js"><link rel="prefetch" href="/vuepress-myBlog/assets/js/18.7992398d.js"><link rel="prefetch" href="/vuepress-myBlog/assets/js/19.a632e76f.js"><link rel="prefetch" href="/vuepress-myBlog/assets/js/20.e56ffad1.js"><link rel="prefetch" href="/vuepress-myBlog/assets/js/21.6a7c0062.js"><link rel="prefetch" href="/vuepress-myBlog/assets/js/22.596d57fb.js"><link rel="prefetch" href="/vuepress-myBlog/assets/js/23.24abfa8f.js"><link rel="prefetch" href="/vuepress-myBlog/assets/js/24.cb493a30.js"><link rel="prefetch" href="/vuepress-myBlog/assets/js/25.a1be89ee.js"><link rel="prefetch" href="/vuepress-myBlog/assets/js/26.66c2bd13.js"><link rel="prefetch" href="/vuepress-myBlog/assets/js/27.2ada5653.js"><link rel="prefetch" href="/vuepress-myBlog/assets/js/4.ad960a8e.js"><link rel="prefetch" href="/vuepress-myBlog/assets/js/5.231ac808.js"><link rel="prefetch" href="/vuepress-myBlog/assets/js/6.08822908.js"><link rel="prefetch" href="/vuepress-myBlog/assets/js/8.126cf252.js"><link rel="prefetch" href="/vuepress-myBlog/assets/js/9.06db6c48.js"><link rel="prefetch" href="/vuepress-myBlog/assets/js/vuejs-paginate.56226e36.js">
+    <link rel="stylesheet" href="/vuepress-myBlog/assets/css/0.styles.6a696121.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div id="vuepress-theme-blog__global-layout"><section id="header-wrapper"><header id="header"><div class="header-wrapper"><div class="title"><a href="/vuepress-myBlog/" class="nav-link home-link">PachVerb | 网络日志 </a></div> <div class="header-right-wrap"><ul class="nav"><li class="nav-item"><a href="/vuepress-myBlog/" class="nav-link">首页</a></li><li class="nav-item"><a href="/vuepress-myBlog/programm/" class="nav-link router-link-active">编程</a></li><li class="nav-item"><a href="/vuepress-myBlog/technology/" class="nav-link">技术</a></li><li class="nav-item"><a href="/vuepress-myBlog/reads/" class="nav-link">阅读</a></li><li class="nav-item"><a href="/vuepress-myBlog/tag/" class="nav-link">标签</a></li><li class="nav-item"><a href="/vuepress-myBlog/about/" class="nav-link">关于我</a></li><li class="nav-item"><a href="https://github.com/PachVerb/" target="_blank" rel="noopener noreferrer" class="nav-link external">Github</a></li></ul> <div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <a href="/rss.xml" class="feed"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rss"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg></a></div></div></header></section> <div id="mobile-header"><div class="mobile-header-bar"><div class="mobile-header-title"><a href="/vuepress-myBlog/" class="nav-link mobile-home-link">PachVerb | 网络日志 </a> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg></div> <div class="mobile-menu-wrapper"><hr class="menu-divider"> <ul class="mobile-nav"><li class="mobile-nav-item"><a href="/vuepress-myBlog/" class="nav-link">首页</a></li><li class="mobile-nav-item"><a href="/vuepress-myBlog/programm/" class="nav-link router-link-active">编程</a></li><li class="mobile-nav-item"><a href="/vuepress-myBlog/technology/" class="nav-link">技术</a></li><li class="mobile-nav-item"><a href="/vuepress-myBlog/reads/" class="nav-link">阅读</a></li><li class="mobile-nav-item"><a href="/vuepress-myBlog/tag/" class="nav-link">标签</a></li><li class="mobile-nav-item"><a href="/vuepress-myBlog/about/" class="nav-link">关于我</a></li><li class="mobile-nav-item"><a href="https://github.com/PachVerb/" target="_blank" rel="noopener noreferrer" class="nav-link external">Github</a></li> <li class="mobile-nav-item"><a href="/rss.xml" class="feed"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rss"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg></a></li></ul></div></div></div> <div class="content-wrapper"><div id="vuepress-theme-blog__post-layout"><article itemscope="itemscope" itemtype="https://schema.org/BlogPosting" class="vuepress-blog-theme-content"><header><h1 itemprop="name headline" class="post-title">
+        尝鲜ES2020新特性
+      </h1> <div class="post-meta"><div itemprop="publisher author" itemtype="http://schema.org/Person" itemscope="itemscope" class="post-meta-author"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-navigation"><polygon points="3 11 22 2 13 21 11 13 3 11"></polygon></svg> <span itemprop="name">pachverb</span> <span itemprop="address">   in 成都</span></div> <div class="post-meta-date"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg> <time pubdate itemprop="datePublished" datetime="2020-11-03T00:00:00.000Z">
+      Tue Nov 03 2020
+    </time></div> <ul itemprop="keywords" class="post-meta-tags"><li class="post-tag" data-v-42ccfcd5><a href="/vuepress-myBlog/tag/es2020" data-v-42ccfcd5><span data-v-42ccfcd5>es2020</span></a></li></ul></div></header> <div itemprop="articleBody" class="content__default"><p><img src="/vuepress-myBlog/assets/img/red-streetcar-in-old-town.36a0d787.jpg" alt="img"></p> <h3 id="写在前面"><a href="#写在前面" class="header-anchor">#</a> 写在前面</h3> <p>又有很长时间没有发表文章了。其实原计划定于每周发表一篇文章，刚开始觉得这样的频率还好。慢慢的觉得这样的更新效率有点频繁, 也就没在坚持。今天突然翻了翻自己的的博客， 觉着自己写的东西，虽然不是啥大作品，个人觉着还是挺不错的。做程序开发，不管再忙。博客还是得写，哪怕频率拉长一点都可以。废话不多说，开始吧。</p> <h3 id="es新功能"><a href="#es新功能" class="header-anchor">#</a> es新功能</h3> <h4 id="es-module动态导入"><a href="#es-module动态导入" class="header-anchor">#</a> ES MODULE动态导入</h4> <p>标准的import 导入是静态的。会使所有被导入的模块，在加载时就会编译（无法做到,按需加载）.
+动态导入可以做到根据条件动态加载模块依赖. 不管是静态模块导入方式还是动态导入，不可滥用动态导入。
+<strong>使用场景</strong>：</p> <ul><li>当静态导入的模块很明显的降低了代码的加载速度且被使用的可能性很低，或者并不需要马上使用它。</li> <li>当静态导入的模块很明显的占用了大量系统内存且被使用的可能性很低。</li> <li>当被导入的模块，在加载时并不存在，需要异步获取</li> <li>当导入模块的说明符，需要动态构建。（静态导入只能使用静态说明符）</li> <li>当被导入的模块有副作用（这里说的副作用，可以理解为模块中会直接运行的代码），这些副作用只有在触发了某些条件才被需要时。（原则上来说，模块不能有副作用，但是很多时候，你无法控制你所依赖的模块的内容）</li></ul> <p><strong>使用</strong>:
+动态导入使用import关键字, 使用时类似函数调用，调用 import(module-path)。其中的参数表明是模块所在路径。
+以这种方式使用。将会以pormise返回.</p> <div class="language- extra-class"><pre class="language-text"><code>// main
+if(window){
+    import('./my-module.js').then(module =&gt; {
+        console.log(module.a)
+    })
+}else{
+    console.log('now is not browser runtime')
+}
+// my-module
+export const a = 2;
+</code></pre></div><p>执行 main，结果返回main：a</p> <h3 id="空值合并运算符"><a href="#空值合并运算符" class="header-anchor">#</a> 空值合并运算符</h3> <p>作用: 为变量赋予默认值. 默认值设置，比较常见就是 使用 ｜｜ (or）运算符.
+该运算符是双目运算符</p> <p><strong>pattern:</strong> leftexptr ?? right-exptr
+--NOTE:--当左侧操作数值为 null 或 undefined时， 表达式值为右侧值； 否则为左侧操作数值。</p> <p><strong>实践:</strong></p> <div class="language- extra-class"><pre class="language-text"><code>    const nullValue = null;
+    const emptyText = &quot;&quot;; // falsy
+    const someNumber = 42;
+
+    const valA = nullValue ?? &quot;default for A&quot;;
+    const valB = emptyText ?? &quot;default for B&quot;;
+    const valC = someNumber ?? 0;
+
+    console.log(valA); // &quot;default for A&quot;
+    console.log(valB); // &quot;&quot; (as the empty string is not null or undefined)
+    console.log(valC); // 42
+</code></pre></div><h3 id="可选链接运算符-optional-chaining"><a href="#可选链接运算符-optional-chaining" class="header-anchor">#</a> 可选链接运算符(optional chaining)</h3> <p>引用嵌套对象属性，而不用考虑属性是否存在。 使用可选链接运算符 ?.  与字面量属性结合 如果不存在，返回undefined； 函数结果也返回undefined.
+实践：</p> <div class="language- extra-class"><pre class="language-text"><code>const user = { name: &quot;John&quot; };
+
+// Fails with `Uncaught TypeError: Cannot read property 'city' of undefined`
+
+const city = user.address.city;
+
+// Works but verbose
+
+let city = &quot;Not Set&quot;;
+
+if (user.address !== undefined &amp;&amp; user.address !== null) {
+
+  city = user.address.city;
+
+}
+
+// Works and concise but requires a 3rd party library
+
+const city = _.get(user, &quot;address.city&quot;, &quot;Not Set&quot;);
+
+// 🤗
+
+const city = user?.address?.city ?? &quot;Not Set&quot;;
+</code></pre></div><h3 id="bigint"><a href="#bigint" class="header-anchor">#</a> BigInt</h3> <p>javascrip的tnumber可表示最大范围是 2^53-1.现在提供bitInt方法可表示大与边界的数.</p> <div class="language- extra-class"><pre class="language-text"><code>const hugeString = BigInt(&quot;9007199254740991&quot;)
+// ↪ 9007199254740991n
+
+const hugeHex = BigInt(&quot;0x1fffffffffffff&quot;)
+// ↪ 9007199254740991n
+
+const hugeBin = BigInt(&quot;0b11111111111111111111111111111111111111111111111111111&quot;)
+// ↪ 9007199254740991n
+
+// 类型
+let a = 2n
+typeof(a) // bigint
+
+</code></pre></div><h3 id="globalthis"><a href="#globalthis" class="header-anchor">#</a> globalThis</h3> <p>全局globalThis属性包含this类似于全局对象的全局值。而不用针对特定平台hack。在之前获取全局对象，</p> <div class="language- extra-class"><pre class="language-text"><code>var getGlobal = function () {
+
+  if (typeof self !== 'undefined') { return self; }
+
+  if (typeof window !== 'undefined') { return window; }
+
+  if (typeof global !== 'undefined') { return global; }
+
+  throw new Error('unable to locate global object');
+
+};
+
+var globals = getGlobal();
+
+if (typeof globals.setTimeout !== 'function') {
+
+  // no setTimeout in this environment!
+
+}
+</code></pre></div><h3 id="参考指南"><a href="#参考指南" class="header-anchor">#</a> 参考指南</h3> <p><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Statements/import" target="_blank" rel="noopener noreferrer">动态导入| MDN<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator" target="_blank" rel="noopener noreferrer">空值合并运算符|MDN<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining" target="_blank" rel="noopener noreferrer">可选链接|MDN<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt" target="_blank" rel="noopener noreferrer">BigInt<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/globalThis" target="_blank" rel="noopener noreferrer">globalThis<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p></div> <footer><!----> <hr> <!----></footer></article> <div class="sticker vuepress-toc"><div class="vuepress-toc-item vuepress-toc-h3 active"><a href="#写在前面" title="写在前面">写在前面</a></div><div class="vuepress-toc-item vuepress-toc-h3"><a href="#es新功能" title="es新功能">es新功能</a></div><div class="vuepress-toc-item vuepress-toc-h3"><a href="#空值合并运算符" title="空值合并运算符">空值合并运算符</a></div><div class="vuepress-toc-item vuepress-toc-h3"><a href="#可选链接运算符-optional-chaining" title="可选链接运算符(optional chaining)">可选链接运算符(optional chaining)</a></div><div class="vuepress-toc-item vuepress-toc-h3"><a href="#bigint" title="BigInt">BigInt</a></div><div class="vuepress-toc-item vuepress-toc-h3"><a href="#globalthis" title="globalThis">globalThis</a></div><div class="vuepress-toc-item vuepress-toc-h3"><a href="#参考指南" title="参考指南">参考指南</a></div></div></div></div> <footer class="footer" data-v-fdbf4940><div class="footer-left-wrap" data-v-fdbf4940><ul class="contact" data-v-fdbf4940><li class="contact-item" data-v-fdbf4940><a href="https://github.com/vuejs/vuepress" target="_blank" rel="noopener noreferrer" class="nav-link external" data-v-fdbf4940><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github" data-v-fdbf4940><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" data-v-fdbf4940></path></svg>
+          
+        </a></li><li class="contact-item" data-v-fdbf4940><a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" class="nav-link external" data-v-fdbf4940><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-youtube" data-v-fdbf4940><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z" data-v-fdbf4940></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" data-v-fdbf4940></polygon></svg>
+          
+        </a></li></ul></div> <div class="footer-right-wrap" data-v-fdbf4940><ul class="copyright" data-v-fdbf4940><li class="copyright-item" data-v-fdbf4940><a href="https://policies.google.com/privacy?hl=en-US" target="_blank" rel="noopener noreferrer" class="nav-link external" data-v-fdbf4940>Privacy Policy</a></li><li class="copyright-item" data-v-fdbf4940><a href="/vuepress-myBlog/programm/2020/11/03/es11%E7%89%B9%E6%96%B0/.html" class="nav-link" data-v-fdbf4940>MIT Licensed | Copyright © 2020 PachVerb</a></li></ul></div></footer></div><div class="global-ui"></div></div>
+    <script src="/vuepress-myBlog/assets/js/app.1a1a3623.js" defer></script><script src="/vuepress-myBlog/assets/js/7.aebf1908.js" defer></script><script src="/vuepress-myBlog/assets/js/3.a8bf2d9b.js" defer></script><script src="/vuepress-myBlog/assets/js/11.df003527.js" defer></script>
+  </body>
+</html>
